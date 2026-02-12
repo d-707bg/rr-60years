@@ -45,12 +45,12 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
-  --muted-foreground: var(----muted-foreground);
+  --muted-foreground: var(--muted-foreground);
 }
 
 :root {
   --radius: 0.625rem;
-  --background: #aee2e8;
+  --background: #f5f7fa;
   --foreground: #0f1b2d;
   --card: #f7fcfd;
   --card-foreground: #0f1b2d;
@@ -123,12 +123,11 @@
   }
   body {
     @apply text-foreground;
-    background-color: #aee2e8;
-    background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0) 36%),
-      radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 32%),
-      radial-gradient(circle at 70% 82%, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0) 32%),
-      linear-gradient(135deg, #bde9ef 0%, #aee2e8 50%, #d4f3f7 100%),
-      repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15) 1px, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0) 4px);
+    background-color: var(--background);
+    background-image: radial-gradient(circle at 20% 20%, rgba(28, 78, 117, 0.08), rgba(255, 255, 255, 0) 40%),
+      radial-gradient(circle at 85% 15%, rgba(11, 46, 74, 0.06), rgba(255, 255, 255, 0) 42%),
+      radial-gradient(circle at 70% 82%, rgba(28, 78, 117, 0.05), rgba(255, 255, 255, 0) 46%),
+      linear-gradient(180deg, #ffffff 0%, #f5f7fa 68%, #eef3f7 100%);
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
@@ -145,11 +144,3 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
