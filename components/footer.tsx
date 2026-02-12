@@ -40,8 +40,8 @@ export function Footer() {
           </p>
           <div className="space-y-2 text-sm text-[#2d5876]">
             <p>Стара Загора, България</p>
-            <a className="font-semibold text-[#1c4e75]" href="https://gperr.org" target="_blank" rel="noreferrer">
-              gperr.org
+            <a className="font-semibold text-[#1c4e75]" href="https://romainrolland.org/2025/" target="_blank" rel="noreferrer">
+              romainrolland.org
             </a>
           </div>
         </div>
