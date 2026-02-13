@@ -1,8 +1,9 @@
 "use client";
 
-import { Check, Copy, CreditCard, HeartHandshake, Info } from "lucide-react";
+import { Check, Copy, CreditCard, HeartHandshake, Info, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const IBAN = "BG31FINV915010BGN0H32A";
 const BIC = "FINVBGSF";
@@ -10,6 +11,7 @@ const BANK = "FIRST INVESTMENT BANK, BULGARIA";
 
 export default function DonationsPage() {
   const [copied, setCopied] = useState(false);
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
 
   const handleCopy = async () => {
     try {
@@ -89,13 +91,15 @@ export default function DonationsPage() {
         </section>
 
         <aside className="rounded-3xl border border-[#0b2e4a]/10 bg-white p-6 shadow-sm md:p-8">
-          <div className="space-y-5">
-            <div className="space-y-1">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2d5876]">
-                Дарителска сметка
-              </p>
-              <p className="text-lg font-semibold text-[#0b2e4a]">{BANK}</p>
-            </div>
+          <div className="flex gap-6 items-start">
+            {/* Bank Details - Left Side */}
+            <div className="flex-1 space-y-5">
+              <div className="space-y-1">
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2d5876]">
+                  Дарителска сметка
+                </p>
+                <p className="text-lg font-semibold text-[#0b2e4a]">{BANK}</p>
+              </div>
 
             <div className="space-y-2 rounded-2xl border border-[#0b2e4a]/10 bg-white p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#2d5876]">
@@ -133,15 +137,61 @@ export default function DonationsPage() {
               <p className="font-mono text-base font-semibold text-[#0b2e4a]">{BIC}</p>
             </div>
 
-            <div className="rounded-2xl border border-[#0b2e4a]/10 bg-[#fff7ed] p-5">
-              <p className="text-sm font-semibold text-[#7c2d12]">Важно</p>
-              <p className="mt-1 text-sm leading-relaxed text-[#7c2d12]/90">
-                При нужда от основание за превод, използвайте: „Юбилей 60 години“.
+              <div className="rounded-2xl border border-[#0b2e4a]/10 bg-[#fff7ed] p-5">
+                <p className="text-sm font-semibold text-[#7c2d12]">Важно</p>
+                <p className="mt-1 text-sm leading-relaxed text-[#7c2d12]/90">
+                  При нужда от основание за превод, използвайте: &ldquo;Юбилей 60 години&rdquo;.
+                </p>
+              </div>
+            </div>
+
+            {/* Poster Image - Right Side */}
+            <div className="relative shrink-0">
+              <div
+                className="relative cursor-pointer overflow-hidden rounded-2xl border border-[#0b2e4a]/10 shadow-sm transition-transform hover:scale-105"
+                onClick={() => setIsImageModalOpen(true)}
+              >
+                <Image
+                  src="/poster.jpg"
+                  alt="Юбилеен постер на ГПЧЕ Ромен Ролан"
+                  width={240}
+                  height={300}
+                  className="w-80 h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-black/0 hover:bg-black/5 transition-colors" />
+              </div>
+              <p className="mt-2 text-xs text-[#2d5876] text-center">
+                Натиснете за уголемяване
               </p>
             </div>
           </div>
         </aside>
       </div>
+
+      {/* Image Modal */}
+      {isImageModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={() => setIsImageModalOpen(false)}
+        >
+          <div className="relative max-h-[90vh] max-w-4xl">
+            <button
+              onClick={() => setIsImageModalOpen(false)}
+              className="absolute -top-12 right-0 rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20"
+            >
+              <X className="h-6 w-6" />
+            </button>
+            <Image
+              src="/poster.jpg"
+              alt="Юбилеен постер на ГПЧЕ Ромен Ролан"
+              width={800}
+              height={1000}
+              className="max-h-[90vh] w-auto rounded-lg object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
     </main>
   );
 }
