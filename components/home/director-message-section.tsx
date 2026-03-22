@@ -9,8 +9,8 @@ const paragraphs = [
 
 export function DirectorMessageSection() {
   return (
-    <section className="mt-16 grid items-start gap-8 md:grid-cols-[0.85fr,1.15fr] md:gap-10">
-      <figure className="order-1 mx-auto w-full max-w-sm">
+    <section className="mt-16 flex flex-col gap-8 md:flex-row md:gap-10">
+      <figure className="flex-shrink-0 w-full max-w-sm">
         <div className="overflow-hidden rounded-2xl border border-[#164e89]/20 bg-white">
           <Image
             src="/nikolova.jpg"
@@ -26,7 +26,7 @@ export function DirectorMessageSection() {
         </div>
       </figure>
 
-      <div className="order-2 space-y-5 text-[#164e89]">
+      <div className="flex-1 space-y-5 text-[#164e89]">
         <h2 className="text-3xl font-bold leading-tight md:text-4xl">Обръщение на директора</h2>
 
         <div className="space-y-4">
