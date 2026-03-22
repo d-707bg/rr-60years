@@ -1,4 +1,6 @@
 
+import { ChevronDown, ChevronUp } from "lucide-react";
+
 type ProgramEvent = {
   id: number;
   icon: string;
@@ -199,11 +201,9 @@ export function ProgramAccordion() {
                   </div>
                 </div>
 
-                <span
-                  className="mt-1 shrink-0 text-xs font-semibold text-[#096fa7] transition-transform group-open:rotate-180"
-                  aria-hidden
-                >
-                  ▼
+                <span className="mt-1 shrink-0 text-[#096fa7]" aria-hidden>
+                  <ChevronDown className="size-4 group-open:hidden" />
+                  <ChevronUp className="hidden size-4 group-open:block" />
                 </span>
               </div>
 
