@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const IBAN = "BG31FINV915010BGN0H32A";
 const BIC = "FINVBGSF";
-const BANK = "FIRST INVESTMENT BANK";
+const BANK = "FIRST INVESTMENT BANK, BULGARIA";
 
 export default function DonationsPage() {
   const [copied, setCopied] = useState(false);
@@ -60,11 +60,12 @@ export default function DonationsPage() {
 
         <div className="order-1 space-y-4 text-[#164e89] md:order-2">
           <h2 className="text-3xl font-bold">Как можете да ни подкрепите:</h2>
-          <ul className="space-y-2 leading-relaxed">
-            <li>- Дарения</li>
-            <li>- Доброволчество</li>
-            <li>- Партньорства</li>
-          </ul>
+          <p className="leading-relaxed">
+            <span className="font-semibold">Дарения:</span> Вашият финансов принос ще ни
+            помогне да реализираме събитията и да ги направим незабравими. Всяко евро има
+            значение! Средствата могат да се превеждат по сметката на училищното
+            настоятелство:
+          </p>
 
           <div className="rounded-2xl border border-[#096fa7]/30 bg-[#e6e6e6]/45 p-5">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#096fa7]">
@@ -75,7 +76,7 @@ export default function DonationsPage() {
                 <span className="font-semibold">IBAN:</span> {IBAN}
               </p>
               <p className="text-sm text-[#164e89]">
-                <span className="font-semibold">BIC:</span> {BIC}
+                <span className="font-semibold">BIC/SWIFT КОД:</span> {BIC}
               </p>
               <p className="text-sm text-[#164e89]">
                 <span className="font-semibold">Банка:</span> {BANK}
@@ -99,6 +100,18 @@ export default function DonationsPage() {
               )}
             </button>
           </div>
+
+          <p className="leading-relaxed">
+            <span className="font-semibold">Доброволчество:</span> Винаги сме имали
+            подкрепата на хора с големи сърца. Ако имате желание да се включите активно в
+            организацията на събитията, не се колебайте да се свържете с нас.
+          </p>
+
+          <p className="leading-relaxed">
+            <span className="font-semibold">Партньорства:</span> Ако вашата компания или
+            организация иска да бъде част от това важно събитие и да се присъедини като
+            партньор или спонсор, свържете се с нас за повече информация.
+          </p>
 
           <Link href="/" className="inline-flex text-sm font-semibold text-[#096fa7] hover:underline">
             <ArrowLeft className="h-4 w-4"/> Обратно към началната страница
