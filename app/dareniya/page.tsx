@@ -1,17 +1,16 @@
 "use client";
 
-import { Check, Copy, CreditCard, HeartHandshake, Info, X } from "lucide-react";
+import { Check, Copy } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 const IBAN = "BG31FINV915010BGN0H32A";
 const BIC = "FINVBGSF";
-const BANK = "FIRST INVESTMENT BANK, BULGARIA";
+const BANK = "FIRST INVESTMENT BANK";
 
 export default function DonationsPage() {
   const [copied, setCopied] = useState(false);
-  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
 
   const handleCopy = async () => {
     try {
@@ -24,174 +23,88 @@ export default function DonationsPage() {
   };
 
   return (
-    <main className="mx-auto w-full max-w-6xl px-4 py-10 md:px-6 md:py-14">
-      <div className="grid gap-10 lg:grid-cols-[1.05fr,0.95fr] lg:items-start">
-        <section className="space-y-6">
-          <div className="space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2d5876]">
-              Дарения
-            </p>
-            <h1 className="font-[var(--font-playfair)] text-3xl leading-tight text-[#0b2e4a] md:text-4xl">
-              Подкрепи юбилея на ГПЧЕ „Ромен Ролан“
-            </h1>
-            <p className="max-w-2xl text-base leading-relaxed text-[#2d5876] md:text-lg">
-              С твоята подкрепа правим празничната седмица по-достъпна и по-красива за
-              всички поколения на гимназията.
-            </p>
-          </div>
-
-          <div className="grid gap-4 md:grid-cols-2">
-            <div className="rounded-2xl border border-[#0b2e4a]/10 bg-white p-6 shadow-sm">
-              <div className="flex items-start gap-3">
-                <HeartHandshake className="mt-1 h-5 w-5 text-[#1c4e75]" aria-hidden />
-                <div className="space-y-1">
-                  <p className="text-sm font-semibold text-[#0b2e4a]">
-                    За какво са средствата
-                  </p>
-                  <p className="text-sm leading-relaxed text-[#2d5876]">
-                    Организация на юбилейни събития, техника/сцена, изложбени материали и
-                    инициативи за общността.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-[#0b2e4a]/10 bg-white p-6 shadow-sm">
-              <div className="flex items-start gap-3">
-                <Info className="mt-1 h-5 w-5 text-[#1c4e75]" aria-hidden />
-                <div className="space-y-1">
-                  <p className="text-sm font-semibold text-[#0b2e4a]">Прозрачност</p>
-                  <p className="text-sm leading-relaxed text-[#2d5876]">
-                    Ако имате нужда от отчет или потвърждение, свържете се с училището.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="rounded-2xl border border-[#0b2e4a]/10 bg-[#f4f8fb] p-6 md:p-7">
-            <div className="flex items-start gap-3">
-              <CreditCard className="mt-1 h-5 w-5 text-[#1c4e75]" aria-hidden />
-              <div className="space-y-2">
-                <p className="text-sm font-semibold text-[#0b2e4a]">
-                  Банков превод (препоръчано)
-                </p>
-                <p className="text-sm text-[#2d5876]">
-                  Най-лесният начин да подкрепиш кампанията.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-sm text-[#2d5876]">
-            <Link href="/" className="font-semibold text-[#1c4e75] hover:underline">
-              ← Обратно към юбилейната страница
-            </Link>
-          </div>
-        </section>
-
-        <aside className="rounded-3xl border border-[#0b2e4a]/10 bg-white p-6 shadow-sm md:p-8">
-          <div className="flex gap-6 items-start">
-            {/* Bank Details - Left Side */}
-            <div className="flex-1 space-y-5">
-              <div className="space-y-1">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2d5876]">
-                  Дарителска сметка
-                </p>
-                <p className="text-lg font-semibold text-[#0b2e4a]">{BANK}</p>
-              </div>
-
-            <div className="space-y-2 rounded-2xl border border-[#0b2e4a]/10 bg-white p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#2d5876]">
-                IBAN
-              </p>
-              <p className="break-all font-mono text-lg font-semibold text-[#0b2e4a]">
-                {IBAN}
-              </p>
-              <button
-                type="button"
-                onClick={handleCopy}
-                className="inline-flex items-center gap-2 rounded-md bg-[#1c4e75] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#0b2e4a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1c4e75] focus-visible:ring-offset-2"
-              >
-                {copied ? (
-                  <>
-                    <Check className="h-4 w-4" aria-hidden />
-                    Копирано
-                  </>
-                ) : (
-                  <>
-                    <Copy className="h-4 w-4" aria-hidden />
-                    Копирай IBAN
-                  </>
-                )}
-              </button>
-              <p className="text-xs text-[#2d5876]" aria-live="polite">
-                {copied ? "IBAN беше копиран." : "Натисни бутона, за да копираш."}
-              </p>
-            </div>
-
-            <div className="space-y-2 rounded-2xl border border-[#0b2e4a]/10 bg-white p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#2d5876]">
-                BIC / SWIFT
-              </p>
-              <p className="font-mono text-base font-semibold text-[#0b2e4a]">{BIC}</p>
-            </div>
-
-              <div className="rounded-2xl border border-[#0b2e4a]/10 bg-[#fff7ed] p-5">
-                <p className="text-sm font-semibold text-[#7c2d12]">Важно</p>
-                <p className="mt-1 text-sm leading-relaxed text-[#7c2d12]/90">
-                  При нужда от основание за превод, използвайте: &ldquo;Юбилей 60 години&rdquo;.
-                </p>
-              </div>
-            </div>
-
-            {/* Poster Image - Right Side */}
-            <div className="relative shrink-0">
-              <div
-                className="relative cursor-pointer overflow-hidden rounded-2xl border border-[#0b2e4a]/10 shadow-sm transition-transform hover:scale-105"
-                onClick={() => setIsImageModalOpen(true)}
-              >
-                <Image
-                  src="/poster.jpg"
-                  alt="Юбилеен постер на ГПЧЕ Ромен Ролан"
-                  width={240}
-                  height={300}
-                  className="w-80 h-auto object-cover"
-                />
-                <div className="absolute inset-0 bg-black/0 hover:bg-black/5 transition-colors" />
-              </div>
-              <p className="mt-2 text-xs text-[#2d5876] text-center">
-                Натиснете за уголемяване
-              </p>
-            </div>
-          </div>
-        </aside>
-      </div>
-
-      {/* Image Modal */}
-      {isImageModalOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
-          onClick={() => setIsImageModalOpen(false)}
-        >
-          <div className="relative max-h-[90vh] max-w-4xl">
-            <button
-              onClick={() => setIsImageModalOpen(false)}
-              className="absolute -top-12 right-0 rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20"
-            >
-              <X className="h-6 w-6" />
-            </button>
-            <Image
-              src="/poster.jpg"
-              alt="Юбилеен постер на ГПЧЕ Ромен Ролан"
-              width={800}
-              height={1000}
-              className="max-h-[90vh] w-auto rounded-lg object-contain"
-              onClick={(e) => e.stopPropagation()}
-            />
-          </div>
+    <main className="mx-auto w-full max-w-6xl px-4 py-8 md:px-6 md:py-12">
+      <section className="grid items-center gap-8 rounded-3xl border border-[#164e89]/15 bg-white p-6 shadow-sm md:grid-cols-2 md:p-10">
+        <div className="space-y-4 text-[#164e89]">
+          <h1 className="text-4xl font-bold md:text-5xl">Подкрепете ни</h1>
+          <p className="leading-relaxed">
+            Юбилеят на ГПЧЕ „Ромен Ролан“ е специален момент в историята на нашето
+            училище. За да направим празника още по-запомнящи се, се нуждаем от вашата
+            подкрепа! Независимо дали ще се включите с дарение, чрез доброволчески труд
+            или като партньор на събитията, всяка форма на помощ е ценна и важна за нас.
+            Благодарим ви, че сте част от нашето пътуване!
+          </p>
         </div>
-      )}
+
+        <div className="relative overflow-hidden rounded-2xl border border-[#164e89]/15 bg-[#e6e6e6]">
+          <Image
+            src="/poster.jpg"
+            alt="Юбилеен постер"
+            width={850}
+            height={1000}
+            className="h-full w-full object-cover"
+          />
+        </div>
+      </section>
+
+      <section className="mt-10 grid items-center gap-8 rounded-3xl border border-[#164e89]/15 bg-white p-6 shadow-sm md:grid-cols-2 md:p-10">
+        <div className="order-2 relative overflow-hidden rounded-2xl border border-[#164e89]/15 bg-[#e6e6e6] md:order-1">
+          <Image
+            src="/img2.jpg"
+            alt="Подкрепа за юбилейните събития"
+            width={900}
+            height={620}
+            className="h-full w-full object-cover"
+          />
+        </div>
+
+        <div className="order-1 space-y-4 text-[#164e89] md:order-2">
+          <h2 className="text-3xl font-bold">Как можете да ни подкрепите:</h2>
+          <ul className="space-y-2 leading-relaxed">
+            <li>- Дарения</li>
+            <li>- Доброволчество</li>
+            <li>- Партньорства</li>
+          </ul>
+
+          <div className="rounded-2xl border border-[#096fa7]/30 bg-[#e6e6e6]/45 p-5">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#096fa7]">
+              Банкова сметка за дарения
+            </p>
+            <div className="mt-4 space-y-2">
+              <p className="text-sm text-[#164e89]">
+                <span className="font-semibold">IBAN:</span> {IBAN}
+              </p>
+              <p className="text-sm text-[#164e89]">
+                <span className="font-semibold">BIC:</span> {BIC}
+              </p>
+              <p className="text-sm text-[#164e89]">
+                <span className="font-semibold">Банка:</span> {BANK}
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={handleCopy}
+              className="mt-4 inline-flex items-center gap-2 rounded-md bg-[#096fa7] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#164e89]"
+            >
+              {copied ? (
+                <>
+                  <Check className="h-4 w-4" aria-hidden />
+                  Копирано
+                </>
+              ) : (
+                <>
+                  <Copy className="h-4 w-4" aria-hidden />
+                  Копирай IBAN
+                </>
+              )}
+            </button>
+          </div>
+
+          <Link href="/" className="inline-flex text-sm font-semibold text-[#096fa7] hover:underline">
+            ← Обратно към началната страница
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }

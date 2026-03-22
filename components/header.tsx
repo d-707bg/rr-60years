@@ -5,10 +5,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const navItems = [
-  { href: "/", label: "Юбилей" },
+  { href: "/", label: "Начало" },
   { href: "/#programa", label: "Програма" },
   { href: "/#galeria", label: "Галерия" },
-  { href: "/dareniya", label: "Дарения" },
 ];
 
 export function Header() {
@@ -23,7 +22,7 @@ export function Header() {
 
   return (
     <header className="relative z-50">
-      <div className="bg-[#0b2e4a] text-white">
+      <div className="bg-[#164e89] text-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 text-[11px] tracking-wide md:px-6">
           <p className="uppercase">ГПЧЕ „Ромен Ролан“ · Юбилейна страница</p>
           <div className="hidden items-center gap-3 opacity-90 md:flex">
@@ -40,7 +39,7 @@ export function Header() {
       </div>
 
       <div
-        className={`bg-white/92 backdrop-blur supports-[backdrop-filter]:bg-white/75 ${
+        className={`bg-white/92 backdrop-blur supports-backdrop-filter:bg-white/75 ${
           shadow ? "shadow-sm" : "shadow-none"
         }`}
       >
@@ -55,10 +54,10 @@ export function Header() {
               priority
             />
             <div className="leading-tight">
-              <p className="text-sm font-semibold text-[#0b2e4a]">
+              <p className="text-sm font-semibold text-[#164e89]">
                 ГПЧЕ „Ромен Ролан“
               </p>
-              <p className="text-xs text-[#2d5876]">Стара Загора · 60 години</p>
+              <p className="text-xs text-[#096fa7]">Стара Загора · 60 години</p>
             </div>
           </Link>
 
@@ -67,7 +66,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-semibold text-[#1c4e75] hover:text-[#0b2e4a]"
+                className="text-sm font-semibold text-[#164e89] hover:text-[#096fa7]"
               >
                 {item.label}
               </Link>
@@ -77,20 +76,20 @@ export function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="/dareniya"
-              className="inline-flex items-center rounded-md bg-[#1c4e75] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#0b2e4a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1c4e75] focus-visible:ring-offset-2"
+              className="inline-flex items-center rounded-md bg-[#096fa7] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#164e89] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#096fa7] focus-visible:ring-offset-2"
             >
               Подкрепи юбилея
             </Link>
           </div>
         </div>
 
-        <nav className="border-t border-[#0b2e4a]/10 bg-white md:hidden">
+        <nav className="border-t border-[#164e89]/10 bg-white md:hidden">
           <div className="mx-auto flex max-w-6xl items-center gap-2 overflow-auto px-4 py-2">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="whitespace-nowrap rounded-full bg-[#edf5fb] px-3 py-1.5 text-xs font-semibold text-[#1c4e75]"
+                className="whitespace-nowrap rounded-full bg-[#e6e6e6] px-3 py-1.5 text-xs font-semibold text-[#164e89]"
               >
                 {item.label}
               </Link>
