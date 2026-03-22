@@ -22,7 +22,6 @@ export function GallerySection() {
             <div
               className={`w-full ${item % 3 === 0 ? "h-72" : item % 2 === 0 ? "h-60" : "h-44"} bg-[linear-gradient(140deg,#e6e6e6,#ffffff)]`}
             />
-            <p className="px-4 py-3 text-sm font-medium text-[#164e89]">Снимка плейсхолдър {item}</p>
           </div>
         ))}
       </div>
