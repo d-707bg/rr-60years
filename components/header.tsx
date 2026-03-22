@@ -50,7 +50,7 @@ export function Header() {
               alt="ГПЧЕ „Ромен Ролан“"
               width={56}
               height={56}
-              className="h-11 w-auto"
+              className="h-12 w-auto"
               priority
             />
             <div className="leading-tight">
