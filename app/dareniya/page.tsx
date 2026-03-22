@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Copy } from "lucide-react";
+import {ArrowLeft, Check, Copy} from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -101,7 +101,7 @@ export default function DonationsPage() {
           </div>
 
           <Link href="/" className="inline-flex text-sm font-semibold text-[#096fa7] hover:underline">
-            ← Обратно към началната страница
+            <ArrowLeft className="h-4 w-4"/> Обратно към началната страница
           </Link>
         </div>
       </section>

@@ -50,7 +50,7 @@ export function Footer() {
       <div className="border-t border-[#164e89]/10">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-2 px-4 py-5 text-xs text-[#164e89] md:flex-row md:items-center md:px-6">
           <p>© {new Date().getFullYear()} ГПЧЕ „Ромен Ролан“ – юбилей</p>
-          <p>Изработено за юбилейната кампания</p>
+          <p>Изработено от Даниел Тодоров</p>
         </div>
       </div>
     </footer>
