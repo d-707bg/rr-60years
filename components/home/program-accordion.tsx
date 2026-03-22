@@ -1,4 +1,6 @@
+"use client";
 
+import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 type ProgramEvent = {
@@ -159,6 +161,8 @@ const programEvents: ProgramEvent[] = [
 ];
 
 export function ProgramAccordion() {
+  const [openEvents, setOpenEvents] = useState<Record<number, boolean>>({});
+
   return (
     <section
       id="programa"
@@ -177,9 +181,18 @@ export function ProgramAccordion() {
       </div>
 
       <div className="mt-8 space-y-4">
-        {programEvents.map((event) => (
+        {programEvents.map((event) => {
+          const isOpen = !!openEvents[event.id];
+
+          return (
           <details
             key={event.id}
+            onToggle={(e) => {
+              const nextOpen = e.currentTarget.open;
+              setOpenEvents((prev) =>
+                prev[event.id] === nextOpen ? prev : { ...prev, [event.id]: nextOpen },
+              );
+            }}
             className="group overflow-hidden rounded-2xl border border-[#164e89]/15 bg-white shadow-sm transition hover:border-[#096fa7]/35 open:border-[#096fa7]/40"
           >
             <summary className="cursor-pointer list-none p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#096fa7]/40 md:p-5">
@@ -202,8 +215,7 @@ export function ProgramAccordion() {
                 </div>
 
                 <span className="mt-1 shrink-0 text-[#096fa7]" aria-hidden>
-                  <ChevronDown className="size-4 group-open:hidden" />
-                  <ChevronUp className="hidden size-4 group-open:block" />
+                  {isOpen ? <ChevronUp className="size-4" /> : <ChevronDown className="size-4" />}
                 </span>
               </div>
 
@@ -240,7 +252,8 @@ export function ProgramAccordion() {
               </div>
             </div>
           </details>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
