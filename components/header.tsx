@@ -25,16 +25,6 @@ export function Header() {
       <div className="bg-[#164e89] text-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 text-[11px] tracking-wide md:px-6">
           <p className="uppercase">ГПЧЕ „Ромен Ролан“ · Юбилейна страница</p>
-          <div className="hidden items-center gap-3 opacity-90 md:flex">
-            <a
-              href="https://romainrolland.org/2025/"
-              className="hover:underline"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Оригинален сайт
-            </a>
-          </div>
         </div>
       </div>
 
@@ -78,7 +68,7 @@ export function Header() {
               href="/dareniya"
               className="inline-flex items-center rounded-md bg-[#096fa7] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#164e89] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#096fa7] focus-visible:ring-offset-2"
             >
-              Подкрепи юбилея
+              Подкрепете юбилея
             </Link>
           </div>
         </div>

@@ -13,25 +13,24 @@ export function HeroSection() {
       </p>
 
       <div className="relative mx-auto flex min-h-[60vh] max-w-4xl flex-col items-center justify-center px-6 py-20 text-center md:min-h-[68vh]">
-        <p className="text-xs uppercase tracking-[0.3em] text-white/85">Юбилейна година</p>
         <h1 className="mt-5 text-4xl font-bold leading-tight text-white md:text-6xl">
           60 години традиция и професионализъм
         </h1>
         <h2 className="mt-5 text-xl text-white/90 md:text-2xl">
-          Над шест десетилетия, в които създаваме бъдеще.
+          Шест десетилетия, в които създаваме бъдеще.
         </h2>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Link
             href="/#programa"
             className="inline-flex items-center rounded-md bg-[#096fa7] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#164e89]"
           >
-            Виж програмата
+            Вижте програмата
           </Link>
           <Link
             href="/dareniya"
             className="inline-flex items-center rounded-md border border-white/40 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
           >
-            Подкрепи юбилея
+            Подкрепете юбилея
           </Link>
         </div>
       </div>

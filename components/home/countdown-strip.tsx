@@ -58,9 +58,9 @@ export function CountdownStrip() {
 
   return (
     <section className="mt-16 rounded-2xl bg-[#164e89] px-5 py-10 text-center shadow-sm md:px-8">
-      <p className="text-sm uppercase tracking-[0.26em] text-white/85">Юбилеен брояч</p>
+      {/*<p className="text-sm uppercase tracking-[0.26em] text-white/85">Юбилеен брояч</p>*/}
       <h2 className="mt-3 text-2xl font-bold text-white md:text-3xl">
-        До началото на юбилейните събития остава:
+        До началото на юбилейните събития остават:
       </h2>
 
       {isStarted ? (
