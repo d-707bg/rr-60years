@@ -38,7 +38,7 @@ export default function DonationsPage() {
 
         <div className="relative overflow-hidden rounded-2xl border border-[#164e89]/15 bg-[#e6e6e6]">
           <Image
-            src="/poster.jpg"
+            src="/darenie1.jpg"
             alt="Юбилеен постер"
             width={850}
             height={1000}
@@ -50,7 +50,7 @@ export default function DonationsPage() {
       <section className="mt-10 grid items-center gap-8 rounded-3xl border border-[#164e89]/15 bg-white p-6 shadow-sm md:grid-cols-2 md:p-10">
         <div className="order-2 relative overflow-hidden rounded-2xl border border-[#164e89]/15 bg-[#e6e6e6] md:order-1">
           <Image
-            src="/img2.jpg"
+            src="/darenie2.jpg"
             alt="Подкрепа за юбилейните събития"
             width={900}
             height={620}

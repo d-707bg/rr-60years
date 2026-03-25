@@ -4,11 +4,11 @@ export function GallerySection() {
       id="galeria"
       className="scroll-mt-32 mt-16 rounded-3xl border border-[#164e89]/15 bg-white p-6 shadow-sm md:p-10"
     >
-      <div className="max-w-3xl space-y-4">
+      <div className="max-w-3xl space-y-4 text-center mx-auto">
         <h2 className="text-3xl font-bold text-[#164e89] md:text-4xl">Галерия</h2>
         <p className="leading-relaxed text-[#164e89]">
-          Ето някои от най-значимите моменти от историята на нашето училище. Нека заедно
-          създадем нови спомени и снимки, които да продължат да вдъхновяват следващите
+          Ето някои от най-значимите моменти от историята на нашето училище.
+          Нека заедно създадем нови спомени и снимки, които да продължат да вдъхновяват следващите
           поколения роменролановци!
         </p>
       </div>
