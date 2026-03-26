@@ -72,7 +72,7 @@ export function Footer() {
             </div>
             <div className="flex items-start gap-2">
               <MapPin className="h-4 w-4 text-[#096fa7] mt-0.5" />
-              <span>
+              <span className="font-semibold text-[#096fa7] hover:underline">
                 ул. „Цар Иван Шишман" №62,<br />
                 гр. Стара Загора
               </span>

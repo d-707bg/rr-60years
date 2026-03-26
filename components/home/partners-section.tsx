@@ -8,7 +8,7 @@ const partners = [
   { name: "Университет \"Проф. д-р Асен Златаров\"", logo: "/logos/logo_3.svg" },
   { name: "Тракийски университет", logo: "/logos/logo_4.png" },
   { name: "Фондация \"Ромен Ролан\"", logo: "/logos/logo_5.jpg" },
-  { name: "Български фонд за наука", logo: "/logos/logo 6.jpg" },
+  { name: "Български фонд за наука", logo: "/logos/logo-6.jpg" },
   { name: "Министерство на образованието", logo: "/logos/logo_7.svg" },
   { name: "Американски университет в България", logo: "/logos/logo_8.jpg" },
   { name: "Асоциация на езиковите гимназии", logo: "/logos/logo_9.png" },
