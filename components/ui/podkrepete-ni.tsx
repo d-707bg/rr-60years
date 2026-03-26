@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from "next/image";
+import Link from "next/link";
 import {ArrowRight} from "lucide-react";
 
 function PodkrepeteNi() {
@@ -14,9 +15,11 @@ function PodkrepeteNi() {
                     или като партньор на събитията, всяка форма на помощ е ценна и важна за нас.
                     Благодарим ви, че сте част от нашето пътуване!
                 </p>
-                <button className="mt-2 inline-flex items-center gap-2 rounded-md bg-[#096fa7] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#164e89]">
-                    Вижте повече <ArrowRight className="w-4 h-4"/>
-                </button>
+                <Link href="/dareniya">
+                    <button className="mt-2 inline-flex items-center gap-2 rounded-md bg-[#096fa7] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#164e89]">
+                        Вижте повече <ArrowRight className="w-4 h-4"/>
+                    </button>
+                </Link>
             </div>
 
             <div className="relative overflow-hidden rounded-2xl border border-[#164e89]/15 bg-[#e6e6e6]">

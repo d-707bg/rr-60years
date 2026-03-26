@@ -8,16 +8,16 @@ import { ProgramAccordion } from "@/components/home/program-accordion";
 import PodkrepeteNi from "@/components/ui/podkrepete-ni";
 
 export default function Home() {
-  return (
-	<main className="mx-auto w-full max-w-6xl px-4 py-8 md:px-6 md:py-12">
-	  <HeroSection />
-	  <DirectorMessageSection />
-	  <IntroSection />
-	  <CountdownStrip />
-	  <ProgramAccordion />
-		<PodkrepeteNi/>
-	  <PartnersSection />
-	  <GallerySection />
-	</main>
-  );
+	return (
+		<main className="mx-auto w-full max-w-6xl px-4 py-8 md:px-6 md:py-12">
+			<HeroSection/>
+			<DirectorMessageSection/>
+			<IntroSection/>
+			<CountdownStrip/>
+			<ProgramAccordion/>
+			<PodkrepeteNi/>
+			<PartnersSection/>
+			<GallerySection/>
+		</main>
+	);
 }
