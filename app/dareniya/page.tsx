@@ -125,9 +125,14 @@ export default function DonationsPage() {
               <p className="leading-relaxed mb-4">
                 Винаги сме имали подкрепата на хора с големи сърца. Ако имате желание да се включите активно в организацията на събитията, не се колебайте да се свържете с нас.
               </p>
-              <button className="inline-flex items-center gap-2 rounded-md bg-[#096fa7] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#164e89] mt-3">
+              <a 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSciX0qxMX5jY7lokjta5LWFZrAF3NctI8mQ-osZFmaLYkoefg/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md bg-[#096fa7] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#164e89] mt-3"
+              >
                 Вижте повече <ArrowRight className="h-4 w-4"/>
-              </button>
+              </a>
             </div>
 
             <div>
@@ -135,9 +140,14 @@ export default function DonationsPage() {
               <p className="leading-relaxed mb-4">
                 Ако вашата компания или организация иска да бъде част от това важно събитие и да се присъедини като партньор или спонсор, свържете се с нас за повече информация.
               </p>
-              <button className="inline-flex items-center gap-2 rounded-md bg-[#096fa7] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#164e89] mt-3">
+              <a 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdMGrwZYeKqSObp9AEfHZZNEuqyJA5gpwo1j_M6gZsQghiTaA/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md bg-[#096fa7] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#164e89] mt-3"
+              >
                 Подкрепете ни <ArrowRight className="h-4 w-4"/>
-              </button>
+              </a>
             </div>
           </div>
         </div>
