@@ -17,8 +17,6 @@ const podcastEpisodes = [
 export default function PodcastPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
-      
       <main className="mx-auto w-full max-w-6xl px-4 py-8 md:px-6 md:py-12">
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold text-[#164e89] mb-4">
