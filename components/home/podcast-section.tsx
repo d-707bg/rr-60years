@@ -6,7 +6,6 @@ const podcastEpisodes = [
     title: "Епизод 1: Иванка Сотирова",
     description: "Разговор с Иванка Сотирова, директор на гимназията в периода 1996 - 2012 г. - човек с ключова роля за утвърждаването на ГПЧЕ \"Ромен Ролан\" като едно от водещите училища в България.",
     youtubeId: "zvqtXbnVJxM",
-    duration: "45:32",
     image: "/podcast-episode-1.jpg"
   }
 ];
@@ -22,7 +21,7 @@ export function PodcastSection() {
           Подкаст Поредица
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          60 години ГПЧЕ „Ромен Ролан" - Специална подкаст поредица посветена на юбилея на училището
+          Срещи с изявени личности, свързани с миналото и настоящето на <br/> ГПЧЕ "Ромен Ролан"
         </p>
       </div>
 
@@ -46,7 +45,6 @@ export function PodcastSection() {
                     <span className="bg-[#164e89] text-white text-xs px-3 py-1 rounded-full font-semibold">
                       Епизод {episode.id}
                     </span>
-                    <span className="text-gray-500 text-sm">{episode.duration}</span>
                   </div>
                   
                   <h3 className="text-xl font-bold text-[#164e89] mb-3">
