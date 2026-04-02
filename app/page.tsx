@@ -17,8 +17,8 @@ export default function Home() {
 			<CountdownStrip/>
 			<ProgramAccordion/>
 			<PodkrepeteNi/>
-			<PodcastSection/>
 			<PartnersSection/>
+			<PodcastSection/>
 			<GallerySection/>
 		</main>
 	);
