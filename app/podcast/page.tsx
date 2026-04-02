@@ -84,7 +84,6 @@ export default function PodcastPage() {
         </div>
       </main>
       
-      <Footer />
     </div>
   );
 }
