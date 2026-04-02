@@ -44,6 +44,9 @@ export function Footer() {
             <Link href="/#programa" className="text-sm font-semibold text-[#164e89]">
               Програма
             </Link>
+            <Link href="/podcast" className="text-sm font-semibold text-[#164e89]">
+              Подкаст
+            </Link>
             <Link href="/#galeria" className="text-sm font-semibold text-[#164e89]">
               Галерия
             </Link>
