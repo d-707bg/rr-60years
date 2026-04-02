@@ -4,11 +4,9 @@ const podcastEpisodes = [
   {
     id: 1,
     title: "Епизод 1: Иванка Сотирова",
-    description: "Разговор с Иванка Сотирова, бивш директор (1996 - 2012)",
+    description: "Разговор с Иванка Сотирова, директор на гимназията в периода 1996 - 2012 г. - човек с ключова роля за утвърждаването на ГПЧЕ \"Ромен Ролан\" като едно от водещите училища в България.",
     youtubeId: "zvqtXbnVJxM",
     duration: "45:32",
-    date: "2024-03-15",
-    guest: "Иванка Сотирова - бивш директор",
     image: "/podcast-episode-1.jpg"
   }
 ];
@@ -31,12 +29,12 @@ export function PodcastSection() {
       <div className="grid gap-6 md:gap-8 mb-8">
         {displayEpisodes.map((episode) => (
           <div key={episode.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="aspect-video bg-gray-200">
+            <div className="grid md:grid-cols-2 gap-6 items-start">
+              <div className="relative aspect-video bg-gray-200 overflow-hidden">
                 <iframe
                   src={`https://www.youtube.com/embed/${episode.youtubeId}`}
                   title={episode.title}
-                  className="w-full h-full"
+                  className="w-full h-full absolute top-0 left-0 border-0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
@@ -58,11 +56,6 @@ export function PodcastSection() {
                   <p className="text-gray-600 mb-4">
                     {episode.description}
                   </p>
-                  
-                  <div className="space-y-2 text-sm text-gray-500">
-                    <p><strong>Гост:</strong> {episode.guest}</p>
-                    <p><strong>Дата:</strong> {new Date(episode.date).toLocaleDateString('bg-BG')}</p>
-                  </div>
                 </div>
                 
                 <div className="mt-4">
