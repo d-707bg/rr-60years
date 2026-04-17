@@ -1,6 +1,3 @@
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
-
 const podcastEpisodes = [
   {
     id: 1,
@@ -8,6 +5,13 @@ const podcastEpisodes = [
     description: "Разговор с Иванка Сотирова, директор на гимназията в периода 1996 - 2012 г. - човек с ключова роля за утвърждаването на ГПЧЕ \"Ромен Ролан\" като едно от водещите училища в България.",
     youtubeId: "zvqtXbnVJxM",
     image: "/podcast-episode-1.jpg"
+  },
+  {
+    id: 2,
+    title: "Епизод 2: Стефан Вълдобрев",
+    description: "Вдъхновяващ разговор със Стефан Вълдобрев - актьор, музикант, режисьор и възпитаник на ГПЧЕ \"Ромен Ролан\", изпълнен с емоция, хумор и ценни уроци.",
+    youtubeId: "gMcpncgUcwE",
+    image: "/podcast-episode-2.jpg"
   }
 ];
 
@@ -20,7 +24,7 @@ export default function PodcastPage() {
             Подкаст Поредица
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Срещи с изявени личности, свързани с миналото и настоящето на <br/> ГПЧЕ "Ромен Ролан"
+            Срещи с изявени личности, свързани с миналото и настоящето на <br/> ГПЧЕ &#34;Ромен Ролан&#34;
           </p>
         </div>
 
