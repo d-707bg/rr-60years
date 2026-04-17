@@ -12,6 +12,8 @@ const partners = [
   { name: "Министерство на образованието", logo: "/logos/logo_7.svg" },
   { name: "Американски университет в България", logo: "/logos/logo_8.jpg" },
   { name: "Асоциация на езиковите гимназии", logo: "/logos/logo_9.png" },
+  { name: "Zaara Estate", logo: "/logos/logo_10.png" },
+  { name: "Comedy Sofia", logo: "/logos/logo_11.png" },
 ];
 
 export function PartnersSection() {

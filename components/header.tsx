@@ -64,10 +64,16 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
+            <Link
+              href="https://www.facebook.com/events/1436510161489422?acontext=%7B%22event_action_history%22%3A[%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D"
+              className="inline-flex items-center rounded-md border-2 border-[#096fa7] px-4 py-2 text-sm font-semibold text-[#096fa7] transition hover:bg-[#096fa7] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#096fa7] focus-visible:ring-offset-2"
+            >
+              Куверт за коктейла
+            </Link>
             <Link
               href="/dareniya"
-              className="inline-flex items-center rounded-md bg-[#096fa7] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#164e89] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#096fa7] focus-visible:ring-offset-2"
+              className="inline-flex items-center rounded-md bg-[#096fa7] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#164e89] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#096fa7] focus-visible:ring-offset-2"
             >
               Подкрепете юбилея
             </Link>
